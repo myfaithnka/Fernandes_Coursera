@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h 
+ * @brief Header file for stats.c
  *
- * <Add Extended Description Here>
+ * variables and functions declared for stats.c
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Roland Fernandes
+ * @date 11/08/2017
  *
  */
 #ifndef __STATS_H__
@@ -24,17 +24,101 @@
 /* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief prints the statistics of an array
  *
- * <Add Extended Description Here>
+ * prints the statistics of an array including minimum, maximum, mean, and
+ * median
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param arr the array
+ * @param length the length of the array
  *
- * @return <Add Return Informaiton here>
+ * @return None
  */
+void print_statistics(unsigned char *arr, unsigned int length);
+  
+/**
+ * @brief prints the array to the screen
+ *
+ * prints the array to the screen
+ *
+ * @param arr the array
+ * @param length the length of the array
+ *
+ * @return None
+ */
+void print_array(unsigned char *arr, unsigned int length);
 
+/**
+ * @brief Calculates the median value
+ *
+ * Calculates the median value in an array
+ *
+ * @param arr the array
+ * @param length the length of the array
+ *
+ * @return None
+ */
+float find_median(unsigned char *arr, unsigned int length);
+
+/**
+ * @brief Calculates the mean value
+ *
+ * Calculates the mean value in an array
+ *
+ * @param arr the array
+ * @param length the length of the array
+ *
+ * @return None
+ */
+float find_mean(unsigned char *arr, unsigned int length);
+
+/**
+ * @brief Finds the maximum value
+ *
+ * Finds the maximum value in an array
+ *
+ * @param arr the array
+ * @param length the length of the array
+ *
+ * @return None
+ */
+int find_maximum(unsigned char *arr, unsigned int length);
+
+/**
+ * @brief Finds the maximum value
+ *
+ * Finds the maximum value in an array
+ *
+ * @param arr the array
+ * @param length the length of the array
+ *
+ * @return None
+ */
+int find_minimum(unsigned char *arr, unsigned int length);
+
+/**
+ * @brief sorts the array from largest to smallest
+ *
+ * sorts the array from largest to smallest using insertion sort
+ *
+ * @param arr the array
+ * @param length the length of the array
+ *
+ * @return None
+ */
+void sort_array(unsigned char *arr, unsigned int length);
+
+/**
+ * @brief swaps two numbers
+ *
+ * swaps numbers
+ *
+ * @param num1 number 1
+ * @param num2 number 2
+ *
+ * @return None
+ */
+ 
+void swap(unsigned char *num1, unsigned char *num2);
 
 #endif /* __STATS_H__ */
