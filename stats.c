@@ -9,14 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file stats.c 
- * @brief Header Function for stats.c
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
- * analyze an array of unsigned char data items and report analytics on the
- * maximum, minimum, mean, and median of the data set
- * 
- * @author Roland Fernandes
- * @date 11/08/2017
+ * <Add Extended Description Here>
+ *
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
 
@@ -38,36 +37,6 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-  
-  void print_statistics(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  void print_array(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  float find_median(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  float find_mean(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  int find_maximum(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  int find_minimum(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  void sort_aaray(unsigned char *arr, unsigned int length){
-      
-  }
-  
-  
 
 }
 
