@@ -50,10 +50,10 @@ void main() {
   float find_median(unsigned char *arr, unsigned int length){
       float median = 0;
       if(length%2==1){
-          median = (float)arr[length/2];
+          median = (float)arr[(length-1)/2];
       }
       else{
-          median = ((float)arr[length/2] + (float)arr[(length/2)+1])/2;
+          median = ((float)arr[(length-1)/2] + (float)arr[((length-1)/2)+1])/2;
       }
       return median;
   }
@@ -99,7 +99,7 @@ void main() {
   void sort_array(unsigned char *arr, unsigned int length){
       for(int i=0;i<length;i++){
           int j, k = arr[i];
-          for(j=i-1;j>=0 && k<arr[j];j--){
+          for(j=i-1;j>=0 && k>arr[j];j--){
               arr[j+1] = arr[j];
           }
           arr[j+1] = k;
