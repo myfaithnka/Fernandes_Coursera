@@ -39,35 +39,76 @@ void main() {
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
   
-  void print_statistics(unsigned char *arr, unsigned int length){
-      
-  }
-  
   void print_array(unsigned char *arr, unsigned int length){
-      
+      printf("The array is:\n");
+      for(int i=0;i<length;i++){
+          printf("%d ", (int)arr[i]);
+      }
+      printf("\n");
   }
   
   float find_median(unsigned char *arr, unsigned int length){
-      
+      float median = 0;
+      if(length%2==1){
+          median = (float)arr[(length-1)/2];
+      }
+      else{
+          median = ((float)arr[(length-1)/2] + (float)arr[((length-1)/2)+1])/2;
+      }
+      return median;
   }
   
   float find_mean(unsigned char *arr, unsigned int length){
-      
+      float sum = 0;
+      for(int i=0;i<length;i++){
+          sum += (float)arr[i];
+      }
+      float mean = sum/length;
+      return mean;
   }
   
   int find_maximum(unsigned char *arr, unsigned int length){
-      
+      int max = 0;
+      for(int i=0;i<length;i++){
+          if((int)arr[i] > max){
+              max = (int)arr[i];
+          }
+      }
+      return max;
   }
   
   int find_minimum(unsigned char *arr, unsigned int length){
-      
+      int min = 999;
+      for(int i=0;i<length;i++){
+          if((int)arr[i] < min){
+              min = (int)arr[i];
+          }
+      }
+      return min;
   }
   
-  void sort_aaray(unsigned char *arr, unsigned int length){
-      
+    void print_statistics(unsigned char *arr, unsigned int length){
+      float median = find_median(arr, length);
+      float mean = find_mean(arr, length);
+      int max = find_maximum(arr, length);
+      int min = find_minimum(arr, length);
+      printf("The mean is %f\nThe median is %f\n", mean, median);
+      printf("The maximum is %d\nThe minimum is %d\n", max, min);
   }
   
+  void sort_array(unsigned char *arr, unsigned int length){
+      for(int i=0;i<length;i++){
+          int j, k = arr[i];
+          for(j=i-1;j>=0 && k>arr[j];j--){
+              arr[j+1] = arr[j];
+          }
+          arr[j+1] = k;
+      }
+  }
   
+  sort_array(test, SIZE);
+  print_array(test, SIZE);
+  print_statistics(test, SIZE);
 
 }
 

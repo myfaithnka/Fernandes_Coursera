@@ -106,6 +106,19 @@ int find_minimum(unsigned char *arr, unsigned int length);
  *
  * @return None
  */
-void sort_aaray(unsigned char *arr, unsigned int length);
+void sort_array(unsigned char *arr, unsigned int length);
+
+/**
+ * @brief swaps two numbers
+ *
+ * swaps numbers
+ *
+ * @param num1 number 1
+ * @param num2 number 2
+ *
+ * @return None
+ */
+ 
+void swap(unsigned char *num1, unsigned char *num2);
 
 #endif /* __STATS_H__ */
